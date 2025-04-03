@@ -7,6 +7,12 @@ import 'data_base_service.dart';
 
 final getIt = GetIt.instance;
 void setup() {
-  getIt.registerSingleton<DataBaseService>(DioService());
-  getIt.registerSingleton<CoinsRepo>(CoinsRepoImpl(getIt<DataBaseService>()));
+  getIt.registerSingleton<
+    DataBaseService
+  >(DioService());
+  getIt.registerSingleton<CoinsRepo>(
+    CoinsRepoImpl(
+      getIt<DataBaseService>(),
+    ),
+  );
 }

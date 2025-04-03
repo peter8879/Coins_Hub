@@ -1,8 +1,10 @@
 import 'package:coins_hub/core/routes/app_routes.dart';
+import 'package:coins_hub/core/services/get_it_service.dart';
 import 'package:coins_hub/features/home/presentation/views/home_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
+  setup();
   runApp(const CoinsHub());
 }
 
