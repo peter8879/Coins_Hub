@@ -1,3 +1,5 @@
+import 'package:coins_hub/core/helper_function/on_generate_routes.dart';
+import 'package:coins_hub/features/home/presentation/views/home_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,6 +19,8 @@ class CoinsHub extends StatelessWidget {
           )
       ),
       debugShowCheckedModeBanner: false,
+      onGenerateRoute: onGenerateRoute,
+      initialRoute:HomeView.routeName ,
 
     );
   }
