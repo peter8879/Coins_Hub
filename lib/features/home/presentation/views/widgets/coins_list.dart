@@ -1,3 +1,4 @@
+import 'package:coins_hub/core/widgets/build_7_days__chart.dart';
 import 'package:coins_hub/features/home/domain/entites/coin_entity.dart';
 import 'package:coins_hub/features/home/presentation/cuibits/coins_cuibit/coins_cubit.dart';
 import 'package:coins_hub/features/home/presentation/views/widgets/coins_item.dart';
@@ -34,8 +35,15 @@ class CoinsList extends StatelessWidget {
             itemCount: coinEntityList.length,
             itemBuilder:
                 (context, index) =>
-                CoinsItem(
-                  coinEntity: coinEntityList[index],
+                GestureDetector(
+                  onTap: (){
+
+                    showCoinDetails(context, coinEntityList[index]);
+
+                  },
+                  child: CoinsItem(
+                    coinEntity: coinEntityList[index],
+                  ),
                 ),
             separatorBuilder:
                 (context, index) =>
@@ -45,6 +53,23 @@ class CoinsList extends StatelessWidget {
           );
         }
       },
+    );
+  }
+  void showCoinDetails(BuildContext context, CoinEntity coin) {
+    showModalBottomSheet(
+      context: context,
+      builder: (context) => Container(
+        padding: EdgeInsets.all(16),
+        child: Column(
+          children: [
+            Text('${coin.name} (7-Day Trend)'),
+            SizedBox(height: 16),
+            Expanded(
+              child: SevenDaysChart(data: coin.generateMock7DayData()),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

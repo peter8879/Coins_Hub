@@ -42,7 +42,7 @@ class CoinsItem extends StatelessWidget {
             ),
             Expanded(
               child: Text(
-                '${coinEntity.currentPriceEgp!.roundToDouble()}',
+                'EGP ${coinEntity.currentPriceEgp!.roundToDouble()}',
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,

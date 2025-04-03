@@ -39,6 +39,7 @@ dependencies:
   dartz: ^0.10.1
   flutter_bloc: ^9.1.0
   cryptocoins_icons: ^0.3.0
+  fl_chart: ^0.70.2
 
 dev_dependencies:
   flutter_test:
