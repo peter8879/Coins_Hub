@@ -13,10 +13,10 @@ class CoinsHub extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-          appBarTheme: const AppBarTheme(
-            backgroundColor: Colors.white,
-            elevation: 0,
-          ),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.white,
+          elevation: 0,
+        ),
       ),
       debugShowCheckedModeBanner: false,
       onGenerateRoute: onGenerateRoute,
