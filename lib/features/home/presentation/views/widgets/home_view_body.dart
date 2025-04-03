@@ -27,25 +27,38 @@ class HomeViewBody
                 const SizedBox(
                   height: 20,
                 ),
-                ListTile(
-                  leading: Text(
-                    "Name",
-                    style: TextStyle(
-                      fontSize: 20,
+                Row(
+                  children: [
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.only(
+                          left: 18
+                        ),
+                        child: Text(
+                          "Name",
+                          style: TextStyle(
+                            fontSize: 20
+                          ),
+                        ),
+                      ),
                     ),
-                  ),
-                  title: Text(
-                    "Symbol",
-                    style: TextStyle(
-                      fontSize: 20,
+                    Expanded(
+                      child: Text(
+                        "Symbol",
+                        style: TextStyle(
+                            fontSize: 20
+                        ),
+                      ),
                     ),
-                  ),
-                  trailing: Text(
-                    "Price(EGP)",
-                    style: TextStyle(
-                      fontSize: 20,
+                    Expanded(
+                      child: Text(
+                        "Price (EGP)",
+                        style: TextStyle(
+                            fontSize: 20
+                        ),
+                      ),
                     ),
-                  ),
+                  ],
                 ),
                 Expanded(
                   child: CoinsList(
