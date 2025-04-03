@@ -1,3 +1,5 @@
+import 'package:coins_hub/core/routes/app_routes.dart';
+import 'package:coins_hub/features/home/presentation/views/home_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,10 +16,11 @@ class CoinsHub extends StatelessWidget {
           appBarTheme: const AppBarTheme(
             backgroundColor: Colors.white,
             elevation: 0,
-          )
+          ),
       ),
       debugShowCheckedModeBanner: false,
-
+      onGenerateRoute: onGenerateRoute,
+      initialRoute: HomeView.routeName,
     );
   }
 }
