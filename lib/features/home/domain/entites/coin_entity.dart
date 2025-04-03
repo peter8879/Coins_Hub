@@ -1,3 +1,5 @@
+
+
 class CoinEntity
 {
   final String id;
@@ -16,4 +18,8 @@ class CoinEntity
     required this.priceChangePercentage7d,
      this.currentPriceEgp,
   });
+   void getEgpPrice(double price)
+   {
+     currentPriceEgp=price*currentPriceUsd;
+   }
 }
